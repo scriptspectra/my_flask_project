@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovian Careers</title>
+    <style>
+        h1{
+            font-size:40px;
+            font-family:Roboto;
+            font-weight:normal;
+            color:rgb(180, 180, 180);
+            text-align:center;
+        }
+        h2{
+            font-family:Roboto;
+            font-size:32px;
+            color: rgb(100);100, 100);
+            text-align:center;
+            font-weight:normal;
+        }
+        .bodytext{
+            font-family:Roboto;
+            color: rgb(80);80, 80);
+        }
+        #container{
+            max-width:720px;
+            margin: 0 auto 0 auto;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container">
+        
+        <h1>{{company_name}} Careers</h1>
+            <img src="https://2c150c49-2c95-4d08-8fb6-37b1ab9e425d-00-1f9j2siqk5kq2.pike.replit.dev/static/business_05.jpg" height="300px" width="30%" style="float:left">
+
+            <img src="https://2c150c49-2c95-4d08-8fb6-37b1ab9e425d-00-1f9j2siqk5kq2.pike.replit.dev/static/business_03.jpg" height="300px" width="40%" style="float:left">
+    
+            <img src="https://2c150c49-2c95-4d08-8fb6-37b1ab9e425d-00-1f9j2siqk5kq2.pike.replit.dev/static/business_05.jpg"  height="300px" width="30%" style="float:left">
+
+        <h2>About Jovian</h2>
+
+        <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <h2>Open Positions</h2>
+
+        <p>
+            {% for job in jobs %}
+               <div class="border-bottom row" style="margin-bottom:16px; padding-bottom:8px;"> 
+                   <div class="col-9">
+                       <h4 style="color:rgb(120,120,120);">{{job['title']}}</h4>
+                       <div><b>Location: </b> {{job['location']}} </div>
+                       <div><b>Salary: </b> {{job['salary']}} </div>
+                   </div>
+                   <div class="col-3">
+                       <button type="button" class="btn btn-outline-primary">Apply</button>
+                   </div>
+               </div>
+            {% endfor %}
+        </p>
+
+        <div style="">
+            <button type="button" class="btn btn-primary" align="center">Contact Us</button>
+        </div>
+
+        <div syle="align-items:center"><p class="mt-4">copyright 2024 - Jovian</p></div>
+        
+        </div>
+
+</body>
+</html>
